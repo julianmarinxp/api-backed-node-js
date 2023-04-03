@@ -1,6 +1,6 @@
 const express = require('express');
 const ProductService= require('./../services/productService');
-const validatorHandler= require('./../middlewares/validator.handler');
+const validatorHandler= require('../middlewares/validator.handler');
 const {createProductSchema ,updateProductSchema,getProductSchema} = require('./../schemaas/product.schema');
 const app = express();
 

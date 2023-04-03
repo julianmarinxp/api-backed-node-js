@@ -8,7 +8,7 @@ const {logErrors, errorHandler, boomErrorHandler} = require('./middlewares/error
 
 const app = express();
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
@@ -24,11 +24,11 @@ const option = {
 }
 app.use(cors());
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send('Hola mi server en express');
 });
 
-app.get('/nueva-ruta', (req, res) => {
+app.get('/api/nueva-ruta', (req, res) => {
   res.send('Hola soy una nueva ruta');
 });
 
